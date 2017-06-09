@@ -1,0 +1,96 @@
+body{
+    background-color: teal;
+}
+.calc_container{
+    width: 50vmin;
+    height:75vmin;
+    background-color: #779ECB;
+    margin:0 auto;
+    border-radius: 20px;
+    text-align: center;
+}
+.output_container{
+    display: inline-block;
+    width: 90%;
+    height: 15%;
+    background-color: #022c3e;
+    border-radius: 20px;
+    margin: 5% 5%;
+    color: white;
+
+}
+.output_container div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    overflow-x: hidden;
+}
+.c_ce_container{
+    display:inline-block;
+    width: 62%;
+    height: 13%;
+    margin: 0 0 1% 5%;
+}
+.c_container{
+    height:100%;
+    width: 48%;
+    background-color: #FFB347;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+.ce_container{
+    height: 100%;
+    width: 48%;
+    background-color: #FFB347;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+.input_container{
+    width: 62%;
+    height:61%;
+    display: inline-block;
+    margin:0 0 0 5%;
+}
+.input_button{
+    display:inline-block;
+    background-color: #FDFD96;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 23%;
+    width: 31%;
+    margin-bottom: 1%;
+}
+p{
+    margin: auto auto;
+}
+.operator_container{
+    width: 25%;
+    height: 75%;
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+}
+.operator_button{
+    height: 18%;
+    width: 90%;
+    background-color: #FF6961;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+    margin:0 0 5% 9%;
+}
+#operator_add{
+    height: 39%;
+}
+
+@media only screen and (max-width: 1025px) and (orientation: portrait) {
+    .calc_container{
+        width: 50vmax;
+        height:75vmax;
+    }
+}
