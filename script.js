@@ -9,7 +9,6 @@ var result;
 
 
 function initialize_calculator(){
-    console.log("calculator is now ready to operate");
     $(".input_button").click(button_pressed);
     $(".operator_button").click(button_pressed);
     $(".c_container").click(button_pressed);
@@ -17,12 +16,9 @@ function initialize_calculator(){
 }
 
 function button_pressed(){
-    console.log("value or operator button has been pressed")
     var button_value = $(this).val();
-    console.log("value of the button is " + button_value);
     switch (button_value){
         case "CE":
-            console.log("you have selected 'clear entry'");
             if(input[input_index] !== ""){//if CE is pressed after a number
                 if(input_index == 0){
                     input.pop();
@@ -41,13 +37,11 @@ function button_pressed(){
             $(".output_container div").text(input.join(""));
             break;
         case "C":
-            console.log("you have selected 'clear all'");
             input = [''];
             input_index = 0;
             $(".output_container div").text(input.join(""));
             break;
         case ".":
-            console.log("you have selected a decimal");
             input_value(button_value);
             $(".output_container div").text(input.join(""));
             break;
@@ -55,12 +49,10 @@ function button_pressed(){
         case "/":
         case "+":
         case "-":
-            console.log("you have selected an operator");
             input_operator(button_value);
             $(".output_container div").text(input.join(""));
             break;
         case "=":
-            console.log("you have selected the operator to compute");
             if(input[0] === ""){ //missing operands (i.e.====)in effect
                 $(".output_container div").text("READY");
                 return;
@@ -74,7 +66,6 @@ function button_pressed(){
             compute();
             break;
         default:
-            console.log("you have selected a number");
             input_value(button_value);
             $(".output_container div").text(input.join(""));
             break;
